@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cikk beküldés</title>
+    <style>
+        .form-container {
+            width: 600px;
+            margin: 50px auto;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 10px;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <fieldset>
+            <legend>Új cikk beküldése</legend>
+            <form action="" id="cikkForm">
+                <p>
+                    <label for="">Cím: </label>
+                    <input type="text" name="cim" required>
+                </p>
+                <p>
+                    <label for="">Szerző: </label>
+                    <input type="text" name="szerzo" required>
+                </p>
+                <p>
+                    <label for="">Publikáció dátuma: </label>
+                    <input type="date" name="publikacio_datuma" required>
+                </p>
+                <p>
+                    <label for="">Kategória: </label>
+                    <input type="text" name="kategoria" required>
+                </p>
+                <p>
+                    <label for="">Tartalom: </label><br>
+                    <textarea name="tartalom" rows="5" cols="50" required></textarea>
+                </p>
+                <button type="submit">Elküld</button>
+            </form>
+        </fieldset>
+
+        <h3>Beküldött cikkek</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Cím</th>
+                    <th>Szerző</th>
+                    <th>Publikáció dátuma</th>
+                    <th>Kategória</th>
+                    <th>Tartalom</th>
+                </tr>
+            </thead>
+            <tbody id="cikkekTable"><!-- ide jönnek az adatok --></tbody>
+        </table>
+    </div>
+
+    <script src="client.js"></script>
+</body>
+</html>
